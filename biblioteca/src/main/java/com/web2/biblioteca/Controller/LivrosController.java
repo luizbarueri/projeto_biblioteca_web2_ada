@@ -3,9 +3,8 @@ package com.web2.biblioteca.Controller;
 import com.web2.biblioteca.Model.LivrosEntity;
 import com.web2.biblioteca.Repository.LivrosRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -18,5 +17,12 @@ public class LivrosController {
     @GetMapping
     public List<LivrosEntity> findAll() {
         return repository.findAll();
+    }
+
+    @PostMapping
+    @RequestMapping("/salvar")
+    public String salvarLivro(@RequestBody LivrosEntity livro){
+        repository.save(livro);
+        return HttpStatus.OK.toString();
     }
 }

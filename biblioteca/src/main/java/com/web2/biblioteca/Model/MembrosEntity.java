@@ -15,6 +15,9 @@ public class MembrosEntity {
         return membro_id;
     }
 
+    public MembrosEntity() {
+    }
+
     public void setMembro_id(Integer membro_id) {
         this.membro_id = membro_id;
     }

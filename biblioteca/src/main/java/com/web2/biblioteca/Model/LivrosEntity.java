@@ -12,6 +12,9 @@ public class LivrosEntity {
     private String autor;
     private Integer ano_publicacao;
 
+    public LivrosEntity() {
+    }
+
     public Integer getLivro_id() {
         return livro_id;
     }

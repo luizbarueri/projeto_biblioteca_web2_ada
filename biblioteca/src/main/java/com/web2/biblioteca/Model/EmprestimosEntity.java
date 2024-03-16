@@ -23,6 +23,9 @@ public class EmprestimosEntity {
     @JoinColumn(name = "livro_id")
     private LivrosEntity livros;
 
+    public EmprestimosEntity() {
+    }
+
     public Integer getEmprestimo_id() {
         return emprestimo_id;
     }
